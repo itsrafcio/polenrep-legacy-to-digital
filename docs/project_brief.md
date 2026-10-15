@@ -22,3 +22,10 @@ From identifying additional work to receiving and recording the customer's decis
 
 ## Desired Outcome
 Create a structured digital process for managing additional work that requires customer approval.
+
+## Definition of Done
+A Story is Done when:
+- all Acceptance Criteria are met,
+- the implemented functionality has been tested,
+- no known blocking defects remain,
+- the functionality is ready to be demonstrated to the Product Owner / stakeholder.

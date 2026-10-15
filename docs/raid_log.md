@@ -13,7 +13,12 @@ No active risks currently require tracking.
 
 ## Issues
 
-No active issues.
+- Attachments added to additional work requests cannot currently be opened during PM review.
+- Related Story: PLD-3
+- Impact: PLD-3 does not meet its Acceptance Criteria and has been reopened.
+- Owner: Engineering
+- Next action: Fix attachment access and retest PLD-3.
+- Status: Closed
 
 ## Dependencies
 

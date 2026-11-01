@@ -54,7 +54,9 @@ the task key, summary and status. Three checks were completed:
 I documented the existing process, defined the requirements and backlog,
 prepared the delivery artefacts, configured the Jira prototype and
 performed its notification tests. The business process comes from my
-own work at PolenRep; the prototype uses fictional request data.
+own work at PolenRep, where I have managed international repair and
+restoration projects with a network of 200+ subcontractor workshops
+since 2008. The prototype uses fictional request data.
 
 ## Project Documentation
 

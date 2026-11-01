@@ -25,13 +25,13 @@ Reduce delays and manual follow-up on unanswered proposals.
 
 - Estimated effort: 4 hours of implementation and 2 hours of testing.
 - Price with standard testing: 900 PLN.
-- Earlier testing: an additional 300 PLN, bringing the total to 1.200 PLN
+- Earlier testing: an additional 300 PLN, bringing the total to 1200 PLN
   and allowing delivery before the pilot assumed in the scenario.
-- Previously approved price limit: 1.000 PLN.
+- Previously approved price limit: 1000 PLN.
 
 ## Decision in the Simulation
 
-The commissioning customer approved the total price of 1.200 PLN
+The commissioning customer approved the total price of 1200 PLN
 for implementation with earlier testing.
 
 ## Prototype and Backlog Status

@@ -1,72 +1,79 @@
 # PolenRep Legacy-to-Digital
 
-A portfolio project based on a real PolenRep process: obtaining
-customer approval for additional vehicle repair work.
+A portfolio project based on the additional-work approval process
+I manage at PolenRep, coordinating vehicle repair and restoration
+projects for international customers.
 
-The existing process uses email, WhatsApp and phone calls.
-The project explores how to structure requests, decisions and
-communication while reducing repetitive manual work.
+The process already works through email, WhatsApp and phone calls.
+This project explores how to reduce manual follow-up and information
+transfer while preserving the existing approval logic.
+
+**Start with the [case study](docs/case_study.md)** for the business
+problem, approach, screenshots and tested result.
+
+## What This Project Demonstrates
+
+- Translating an existing business process into an Epic, 11 user
+  stories with acceptance criteria, a Sprint Goal and Definition of Done.
+- Practising delivery decisions through a simulated sprint, a RAID log,
+  a change request, two status updates, a Sprint Review and a retrospective.
+- Configuring a Jira prototype and testing automated decision emails
+  against three scenarios.
 
 ## Project Scope
 
-The project combines two parts:
+**PLD — PolenRep Legacy to Digital** contains the requirements and
+one simulated Scrum sprint. Its story statuses represent progress
+through the simulation.
 
-- **PLD — PolenRep Legacy to Digital:** requirements analysis,
-  user stories with acceptance criteria and one simulated Scrum
-  sprint covering the additional-work approval process.
-- **PAD — PolenRep Approval Demo:** a working Jira prototype
-  demonstrating manual recording of a customer's decision and
-  automated notification to a test inbox representing the workshop.
+**PAD — PolenRep Approval Demo** is a working Jira prototype of the
+final communication step: the project manager manually records the
+customer's decision, and an automation emails a test inbox representing
+the workshop.
 
-Completing stories in the PLD simulation does not mean that their
-functionality was implemented in PAD.
+The prototype covers this final handoff, not the full process described
+by the PLD stories. Customer submission, automatic decision capture,
+the question-and-answer loop and routing to actual workshops remain
+outside the implemented scope.
 
-## Working Prototype and Tests
+## Working Result
 
-PAD contains a sample additional-work request with fictional vehicle
-and customer information, photo evidence, subcontractor cost,
-customer-facing price and schedule impact.
+PAD-1 contains a fictional additional-work request with vehicle and
+customer information, a photo, separate subcontractor cost and
+customer-facing price, and schedule impact.
 
-The project manager records the customer's decision by changing
-the request's status. Jira Automation sends an email when the status
-becomes accepted or rejected. The message includes the task key,
-summary and status.
-
-Three notification scenarios were checked:
+Changing its status to accepted or rejected sends an email containing
+the task key, summary and status. Three checks were completed:
 
 - Accepted — the expected email arrived.
 - Rejected — the expected email arrived.
 - Pending decision — no decision email was received.
 
-The prototype does not implement the complete end-to-end process.
-Customer-facing submission, automatic capture of the customer's
-response, the question-and-answer loop and notification routing
-to actual workshops were not implemented or tested.
+## My Contribution
+
+I documented the existing process, defined the requirements and backlog,
+prepared the delivery artefacts, configured the Jira prototype and
+performed its notification tests. The business process comes from my
+own work at PolenRep; the prototype uses fictional request data.
 
 ## Project Documentation
-
-Start with the [case study](docs/case_study.md) for the business
-context, approach, tested result and limitations.
 
 - [Project brief](docs/project_brief.md) — scope, stakeholders and Definition of Done
 - [AS-IS process](docs/as_is_process.md) — the existing approval process
 - [Product backlog](docs/backlog.md) — original Jira stories, acceptance criteria and sprint scope
 - [RAID log](docs/raid_log.md) — assumptions, risks, issues and dependencies
-- [Change log](docs/change_log.md) — the proposed 48-hour customer reminder
+- [Change log](docs/change_log.md) — the 48-hour reminder change-control scenario
 - [Status update 1](docs/status_update_1.md) — sprint simulation progress
 - [Status update 2](docs/status_update_2.md) — prototype results and remaining scope
 - [Sprint Review](docs/sprint_review.md) — demonstrated result against the Sprint Goal
 - [Retrospective](docs/sprint_retrospective.md) — lessons and improvements
-- [API troubleshooting notes](docs/api_troubleshooting_notes.md) — a checklist developed during separate API exercises
+- [API troubleshooting notes](docs/api_troubleshooting_notes.md) — a checklist from separate API exercises
 
 ## Remaining Backlog
 
 PLD-6–9 cover the customer question-and-answer flow and are the next
-functional area to consider.
-
-PLD-12 covers an automatic reminder after 48 hours without a customer
-response. It was approved in the training scenario and remains
-unimplemented.
+functional area to consider together. PLD-12 covers a reminder after
+48 hours without a customer response and remains a later enhancement.
 
 ## Tools
 

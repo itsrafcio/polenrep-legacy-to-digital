@@ -1,12 +1,8 @@
 # Sprint 1 Review
 
-Date: 2026-10-31
-
-Configured sprint dates in Jira: 2026-10-15 to 2026-10-29.
+Date: 2026-10-31  
+Configured sprint dates in Jira: 2026-10-15 to 2026-10-29.  
 Sprint status verified on 2026-11-01: closed.
-
-The configured dates describe the sprint schedule in Jira, not the
-dates of every prototype, review or administrative closure activity.
 
 ## Sprint Goal
 
@@ -16,44 +12,32 @@ the customer's final decision.
 
 ## Demonstrated Result
 
-The sprint simulation covered the six core stories.
+The simulated sprint covered six core stories. The working PAD
+prototype covers recording additional-work information and sending
+a notification after the PM manually records a customer decision.
 
-The PAD prototype demonstrates a smaller scope: an additional-work
-record with a photo, subcontractor cost, customer-facing price,
-decision statuses and automated decision emails.
+Three notification checks passed: acceptance, rejection and no decision
+email when returning to the pending status. Tests used fictional data
+and a test inbox representing the workshop.
 
-Three notification checks passed: acceptance, rejection and
-no decision email when returning to the pending status.
-
-Tests used fictional data and a test recipient.
-
-See the [case study](case_study.md) for the implementation
-and test details, and the [backlog](backlog.md) for the original
-story descriptions and Acceptance Criteria.
+See the [case study](case_study.md) for screenshots and test details,
+and the [backlog](backlog.md) for the stories and acceptance criteria.
 
 ## Goal Assessment
 
-The simulation is complete.
-
-The PAD prototype does not demonstrate the full end-to-end
-implementation described by the Sprint Goal.
-
-PLD-10 includes further customer questions and therefore overlaps
-with PLD-6–9. That part of its scope was not implemented in PAD.
-Its simulated Done status does not demonstrate completion of
-all its Acceptance Criteria.
+The final notification step was demonstrated. The full end-to-end
+Sprint Goal was not achieved by the working prototype: customer
+submission, automatic decision capture, the question-and-answer flow
+and routing to actual workshops remain outside its implemented scope.
 
 ## Backlog Decision
 
-Prioritize PLD-6–9 together as the customer question-and-answer flow.
-This would reduce manual handling of questions and responses
-between the customer, PolenRep and the subcontractor.
+Consider PLD-6–9 together as the next functional area covering questions
+and responses between the customer, PolenRep and the workshop.
+Resolve their overlap with the question-handling requirement in PLD-10
+before planning implementation.
 
 Keep PLD-12, the 48-hour reminder, as a later enhancement.
+Its change-control scenario is recorded in [CR-01](change_log.md).
 
-The timing of the earlier-testing option approved in the change
-scenario remains unresolved against this priority.
-See [CR-01 in the change log](change_log.md).
-
-No second sprint is being started as part of this exercise.
-An empty, unstarted PLD Sprint 2 exists in Jira.
+Further implementation requires a scope and scheduling decision.

@@ -2,119 +2,99 @@
 
 ## Business Context
 
-PolenRep manages international vehicle repair and restoration
-projects. During an active project, a workshop may identify
-additional work that was not included in the previously approved scope.
-
-The additional work must be explained, priced and approved by
+PolenRep manages international vehicle repair and restoration projects.
+A workshop may identify additional work outside the previously
+approved scope. The work must be explained, priced and approved by
 the customer before it can proceed.
 
 ## AS-IS Process
 
-The existing process works through email, WhatsApp and phone calls.
-
 The workshop reports the problem, proposed repair, evidence and
-estimated cost to the PolenRep project manager. The project manager
-reviews the information, prepares a customer-facing proposal and
-sends it to the customer.
+estimated cost to the PolenRep project manager through email,
+WhatsApp or phone calls.
 
-The customer can approve, reject or request more information.
-Questions and answers pass through the project manager until the
-customer makes a final decision. The project manager records the
-decision and communicates it to the workshop.
+The project manager reviews the information, prepares a customer-facing
+proposal and sends it to the customer. The customer can approve,
+reject or request more information. Questions and answers pass through
+the project manager until the customer makes a final decision.
+The project manager records that decision and communicates it to
+the workshop.
 
-The process works, but repetitive follow-up and information transfer
-are handled manually.
+The process works, but follow-up and information transfer are manual.
 
 ## Requirements Analysis
 
 The proposed digital process needed to support:
+
 - registration of additional work for a specific vehicle project;
 - photos and supporting evidence;
 - separate subcontractor cost and customer-facing price;
 - presentation of the proposal to the customer;
 - approval, rejection or further questions;
-- recording the customer’s decision;
+- recording the customer's decision;
 - communication of the decision to the correct workshop.
 
 Invoicing, parts procurement, workshop scheduling and complete
-customer project management were outside the project scope.
+customer project management were outside the scope.
 
 ## Target Process
 
-The target process connects the workshop, PolenRep project manager
-and customer in one structured flow:
 1. The workshop registers the additional work and evidence.
 2. The project manager reviews the request and prepares the
    customer-facing quotation.
 3. The customer receives the proposal.
 4. The customer approves, rejects or asks a question.
 5. The decision or question is recorded against the correct request.
-6. The workshop receives the final decision.
+   Questions return to the project manager for clarification.
+6. Once the customer approves or rejects, the workshop receives
+   the final decision.
 
 ## Backlog and Sprint
 
-The requirements were divided into an Epic and user stories in Jira.
-
-Sprint 1 contained six core stories covering registration, evidence,
-quotation preparation, customer approval request, recording the
-decision and informing the workshop.
+The requirements became one Epic and 11 user stories in Jira.
+Sprint 1 was run as a simulation with six core stories covering
+registration, evidence, quotation preparation, the approval request,
+recording the decision and informing the workshop.
 
 Sprint Goal:
 
 > Create a usable end-to-end flow for handling additional work
 > requests from subcontractor submission to communicating the
-> customer’s final decision.
+> customer's final decision.
 
-Configured sprint dates in Jira: 2026-10-15 to 2026-10-29.
-The sprint was verified as closed on 2026-11-01. These are not
-the dates of every subsequent prototype or documentation activity.
+Configured sprint dates in Jira: 2026-10-15 to 2026-10-29.  
+The sprint was verified as closed on 2026-11-01.
 
 PLD-6–9, covering the customer question-and-answer loop, remained
-in the Product Backlog. PLD-10 also includes further customer questions;
-that overlapping requirement was not implemented in PAD.
+in the backlog. PLD-10 also includes further customer questions,
+creating a scope overlap to address before implementing that flow.
 
-See the [backlog](backlog.md) for the original story descriptions
-and Acceptance Criteria copied from Jira.
+See the [backlog](backlog.md) for the original stories and acceptance criteria.
 
 ## Implemented and Tested Result
 
-The Sprint 1 workflow was completed as a training simulation.
+A working prototype was configured in a separate Jira space:
+PolenRep Approval Demo (PAD).
 
-A thin Jira prototype covering part of the target process was
-configured separately in the PolenRep Approval Demo (PAD) Jira space. 
-PAD-1 used fictional data for an additional brake-hose replacement 
-and contained:
-- vehicle and customer information;
-- problem and proposed repair;
-- photo evidence;
-- subcontractor cost;
-- separate customer-facing price;
-- schedule impact;
-- decision statuses.
+PAD-1 represents a fictional request to replace a brake hose.
+Its description contains vehicle and customer information, the problem,
+proposed work, subcontractor cost, customer-facing price and schedule
+impact. A photo is attached. Pending requests can be viewed by filtering
+the list by status.
 
-The PAD space also provided a filtered list of requests awaiting
-a decision; the list was not part of the individual PAD-1 task.
+The project manager manually records the customer's decision by
+changing PAD-1's status. A Jira Automation rule triggers on transitions
+to Zaakceptowana (Accepted) or Odrzucona (Rejected) and sends an email
+to one fixed test inbox representing the workshop.
 
-In this prototype, the project manager manually records the
-customer’s decision by changing the PAD-1 status. A Jira automation
-then sends the recorded decision to the workshop’s test inbox when
-the status changes to accepted (Zaakceptowana) or rejected
-(Odrzucona).
-
-Smart values insert the issue key, summary and current status into
-the message.
-
-The enabled automation uses an issue-transition trigger with the
-destination statuses Zaakceptowana or Odrzucona, followed by a
-custom email action. It uses one fixed test recipient.
-
-This prototype tests the final handoff only. It does not implement
-the customer-facing submission and decision capture.
+The email uses smart values to insert the task key, summary and
+current status. The PM is the person recording the decision in this
+prototype; the email demonstrates the subsequent handoff to the workshop.
 
 ## Test Results
 
 Three notification scenarios were checked:
+
 1. Acceptance — the email arrived with PAD-1, the correct summary
    and the status Zaakceptowana.
 2. Rejection — the email arrived with PAD-1, the correct summary
@@ -122,82 +102,77 @@ Three notification scenarios were checked:
 3. Pending decision — changing the status to Oczekuje na decyzję
    did not send a decision email.
 
-No defects were observed in these checks.
-
-The tests used fictional data and the project owner’s email address
-as the workshop’s test inbox.
+No defects were observed in these checks. Tests used fictional request
+data and the project owner's email address as the workshop's test inbox.
 
 ## Configuration and Test Evidence
 
-Screenshots captured on 2026-11-01 show the existing configuration
-and an email received during testing on 2026-10-31.
+Screenshots captured on 2026-11-01 show the configuration and
+an email received during testing on 2026-10-31.
 
 ### PAD-1 Request
 
-Business information is recorded in the task description.
-Separate custom fields for each business item are not claimed.
+Additional-work information recorded in the task description, with
+separate subcontractor cost and customer-facing price.
 
 ![PAD-1 request with fictional data, separate prices and pending status](images/pad-request.jpg)
 
 ### Enabled Automation
 
-The trigger is limited to transitions to accepted or rejected.
-The email template uses the task key, summary and current status.
+The rule triggers on accepted or rejected status and sends an email
+using the task key, summary and status.
 
 ![Enabled automation with decision statuses and email smart values](images/pad-automation.jpg)
 
 ### Received Acceptance Email
 
-The received message shows PAD-1, the repair title and the accepted
-status. This screenshot evidences the acceptance notification only;
-the other check results are recorded in Test Results above.
+The received message shows PAD-1, the repair title and the accepted status.
 
 ![Acceptance notification received from Jira](images/pad-email.jpg)
 
 ## Scope Change
 
-A request for an automatic reminder after 48 hours without a customer
-response was analysed during the training scenario.
+A change-control simulation considered an automatic reminder after
+48 hours without a customer response, including its effort, price and
+the cost of earlier testing. The commissioning customer approved
+the earlier-testing option within that scenario.
 
-The change was approved and added to the backlog as PLD-12.
-It was not implemented or tested. The timing of the earlier-testing
-option in the scenario remains unresolved against the later backlog
-priority; see [CR-01](change_log.md).
+The requirement was recorded as PLD-12 and remains unimplemented
+in the prototype. See [CR-01](change_log.md) for the scenario decision
+and current backlog position.
 
 ## Risks and Issues
 
-An attachment-access problem was identified during the Sprint 1
-simulation. PLD-3 was reopened, corrected and retested before being
-returned to Done.
+An attachment-access problem was handled in the sprint simulation:
+PLD-3 was reopened, correction and retesting were recorded, and the
+story was returned to Done.
 
-The assumption that subcontractors will adopt the digital workflow
-remains open and would require validation during a pilot or UAT.
+Subcontractor adoption of the digital workflow remains an open
+assumption to validate in a pilot or user acceptance testing (UAT).
+See the [RAID log](raid_log.md).
 
 ## Actual Result and Limitations
 
-The PAD prototype demonstrates structured recording of additional
-work and automated notification after a manually recorded decision.
+The working result is structured recording of additional work and
+automated notification after a manually recorded customer decision.
 
-It does not implement customer submission, automatic recording of
-the customer’s response, the complete question-and-answer loop or
-notification routing to actual subcontractors.
-
-Therefore, the prototype does not demonstrate the complete
-end-to-end implementation described by the Sprint Goal.
+Customer submission, automatic capture of the customer's response,
+the question-and-answer loop and routing to actual subcontractors
+were not implemented. The simulated story statuses therefore do not
+represent delivery of the full end-to-end Sprint Goal.
 
 ## Backlog Decision
 
-PLD-6–9 should be considered together as the next functional area
-because they cover one question-and-answer flow between the customer,
-PolenRep and the workshop.
-
-PLD-12 remains a later enhancement.
+Consider PLD-6–9 together as the next functional area: the
+question-and-answer flow between the customer, PolenRep and the workshop.
+Resolve its overlap with PLD-10 during planning. PLD-12 remains a later
+enhancement. Further implementation requires its own scope and schedule.
 
 ## Lessons Learned
 
-The implementation scope, covered requirements and test evidence
-must be agreed before configuration begins.
+Define the prototype's scope and its relationship to the backlog
+before configuration starts. Agree on observable test results for
+each function being demonstrated.
 
-A Jira status alone does not prove that a business function works.
-The demonstrated result must be separated from simulated work and
-unsupported assumptions.
+Use functional evidence, such as received notifications, to assess
+the result against the requirements.

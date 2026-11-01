@@ -10,7 +10,7 @@ on phone calls and emails.
 - Owner: PM
 - Next action: Validate with subcontractors before any real rollout.
 - Status: Open
-- Validation was not performed in this exercise.
+- Validation: not yet performed.
 
 ## Risks
 
@@ -37,9 +37,6 @@ could not be opened during PM review.
 - Resolution: correction and retesting were recorded in the simulation.
 - Owner: Engineering (simulated role)
 - Status: Closed within the simulation
-
-This entry does not document a verified technical fix in the PAD
-prototype.
 
 ## Dependencies
 

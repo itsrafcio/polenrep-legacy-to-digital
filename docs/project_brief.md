@@ -59,8 +59,3 @@ A Story is Done when:
 - No known blocking defects remain.
 - The functionality is ready to be demonstrated to the Product Owner
   or stakeholder.
-
-This Definition of Done describes the intended standard for
-implemented functionality. Moving a PLD story to Done during the
-sprint simulation does not demonstrate that this standard was met
-in a working system.

@@ -2,60 +2,47 @@
 
 ## CR-01 — Automatic Customer Reminder
 
-Backlog item: PLD-12
+Backlog item: PLD-12  
+Owner: PM
 
-## Scenario Context
+## Context
 
-This change request was analysed in a training scenario.
-
-The customer approving the implementation price is the commissioning
-party for the digital workflow, not the vehicle owner approving
-additional repair work.
+This record documents a change-control simulation. The commissioning
+customer approves the price of implementing the digital workflow.
+The vehicle customer is the intended recipient of the reminder.
 
 ## Requested Change
 
-Send an automatic reminder to the customer if they have not responded
-within 48 hours of delivery of the additional-work proposal.
+Send a reminder 48 hours after delivery of an additional-work proposal
+if the vehicle customer has not responded. Do not send it if the
+customer has approved, rejected or asked a question.
 
 ## Reason
 
-Reduce delays and the need for manual follow-up.
+Reduce delays and manual follow-up on unanswered proposals.
 
-## Impact
+## Impact Assessed in the Simulation
 
-Estimated effort: 4 hours of implementation and 2 hours of testing.
+- Estimated effort: 4 hours of implementation and 2 hours of testing.
+- Price with standard testing: 900 PLN.
+- Earlier testing: an additional 300 PLN, bringing the total to 1.200 PLN
+  and allowing delivery before the pilot assumed in the scenario.
+- Previously approved price limit: 1.000 PLN.
 
-Price with standard testing: 900 PLN.
-
-Earlier testing adds 300 PLN, bringing the total price to 1.200 PLN
-and allowing delivery before the pilot assumed in the scenario.
-
-This exceeds the previously approved limit of 1.000 PLN.
-
-## Scenario Decision
+## Decision in the Simulation
 
 The commissioning customer approved the total price of 1.200 PLN
 for implementation with earlier testing.
 
-## Current Position
+## Prototype and Backlog Status
 
-The approved change was added to the Product Backlog as PLD-12.
-It has not been implemented or tested.
+The requirement was added to the Product Backlog as PLD-12.
+It was not implemented or tested in PAD. The Sprint Review prioritised
+PLD-6–9 and retained PLD-12 as a later enhancement.
 
-The final Sprint Review prioritizes PLD-6–9 and leaves PLD-12
-as a later enhancement.
-
-The earlier-testing commitment from the scenario has not been
-reconciled with that backlog priority. Timing would need to be
-agreed again before committing to delivery.
-
-## Owner
-
-PM
-
-## Status
-
-Approved in the training scenario.
-In the Product Backlog; implementation and testing not completed.
+The pricing decision above records the original scenario; it does not
+set a delivery date for the prototype's remaining backlog. No revised
+schedule or commercial agreement was recorded. These would need to be
+agreed if implementation of PLD-12 proceeds.
 
 See the [Sprint Review](sprint_review.md) for the backlog decision.

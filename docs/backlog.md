@@ -4,39 +4,30 @@ Jira space: PolenRep Legacy to Digital (PLD)
 Epic: PLD-1 — Digital Additional Work Approval  
 Source checked: 2026-11-01
 
-Story descriptions and Acceptance Criteria below were copied from Jira.
+Story descriptions and acceptance criteria below were copied from Jira.
 Only Markdown formatting was changed.
 
 ## Sprint 1
 
-Configured sprint dates in Jira: 2026-10-15 to 2026-10-29.  
-Status at verification: closed.
-
-These are the dates shown on the Jira timeline, not a claim that the
-prototype, review and administrative closure all happened by 29 October.
+Configured dates in Jira: 2026-10-15 to 2026-10-29.  
+Status verified on 2026-11-01: closed.
 
 ### Sprint Goal
 
 Create a usable end-to-end flow for handling additional work requests
 from subcontractor submission to communicating the customer's final decision.
 
-### Scope and Evidence
+### Scope
 
-PLD-2, PLD-3, PLD-4, PLD-5, PLD-10 and PLD-11 have status Gotowe
-(Done) in the sprint simulation. This does not confirm implementation
-or satisfaction of all Acceptance Criteria in a working system.
+Six stories were marked Gotowe (Done) in the simulated sprint:
+PLD-2, PLD-3, PLD-4, PLD-5, PLD-10 and PLD-11.
 
-PLD-10 includes further customer questions, which overlap with the
-PLD-6–9 flow left in the backlog. That part of PLD-10 was not delivered
-by the PAD prototype. The original requirements are retained below
-so this dependency remains visible.
-
-PAD demonstrates manual recording of a decision and notification
-to one fixed test inbox. It does not demonstrate automatic capture of
-the customer's decision or routing to the relevant real subcontractor.
+PLD-10 includes further customer questions, which overlap with PLD-6–9
+in the remaining backlog. This overlap needs to be resolved when
+planning implementation of the question-and-answer flow.
 
 See the [Definition of Done](project_brief.md#definition-of-done)
-and [case study](case_study.md).
+and the [case study](case_study.md) for the working prototype and tests.
 
 ## Sprint 1 Stories — Done in the Simulation
 
@@ -161,4 +152,3 @@ Acceptance Criteria:
 - The customer receives a reminder if they have not responded within 48 hours of proposal delivery.
 - The reminder is not sent if the customer has already approved, rejected or asked a question about the proposal.
 - The reminder is sent to the correct customer and refers to the relevant additional work proposal.
-

@@ -14,12 +14,13 @@ observable evidence that the notification worked.
 The relationship between the PLD stories and the PAD prototype
 was not clearly defined before configuration started.
 
-Smart values were introduced without explaining them first.
+The purpose and syntax of Jira smart values were not understood
+before they were used in the automation email.
 
 ## Improvements for the Next Iteration
 
 Before configuration, agree on the exact scope, the requirements
 it covers and how the result will be tested.
 
-Explain new technical concepts before using them, keep terminology
-consistent and reuse skills already demonstrated.
+Understand new configuration concepts before using them and keep
+terminology consistent across requirements, configuration and tests.

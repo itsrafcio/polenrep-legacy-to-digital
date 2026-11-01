@@ -2,23 +2,44 @@
 
 ## Assumptions
 
-- Subcontractors will use the new digital workflow instead of relying on phone calls and emails.
+### A1 — Subcontractor Adoption
+
+Subcontractors will use the new digital workflow instead of relying
+on phone calls and emails.
+
 - Owner: PM
-- Next action: Validate during pilot/UAT.
+- Next action: Validate with subcontractors before any real rollout.
 - Status: Open
+- Validation was not performed in this exercise.
 
 ## Risks
 
-No active risks currently require tracking.
+### R1 — Requests Remain Outside the Digital Workflow
+
+If subcontractors continue using the existing communication channels,
+additional-work requests may remain outside the digital workflow.
+
+- Impact: incomplete visibility of requests and continued manual follow-up.
+- Response: validate the adoption assumption before a real rollout.
+- Owner: PM
+- Status: Open
+- Related assumption: A1
 
 ## Issues
 
-- Attachments added to additional work requests cannot currently be opened during PM review.
+### I1 — Attachment Access During PM Review
+
+Within the sprint simulation, attachments on additional-work requests
+could not be opened during PM review.
+
 - Related Story: PLD-3
-- Impact: PLD-3 does not meet its Acceptance Criteria and has been reopened.
-- Owner: Engineering
-- Next action: Fix attachment access and retest PLD-3.
-- Status: Closed
+- Impact: the Story did not meet its Acceptance Criteria and was reopened.
+- Resolution: correction and retesting were recorded in the simulation.
+- Owner: Engineering (simulated role)
+- Status: Closed within the simulation
+
+This entry does not document a verified technical fix in the PAD
+prototype.
 
 ## Dependencies
 

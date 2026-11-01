@@ -1,31 +1,66 @@
 # Project Brief
 
 ## Background
-PolenRep manages repair and restoration projects for international customers. During an ongoing project, additional repair work is often identified that was not included in the original scope and requires customer approval before the additional work can proceed.
+
+PolenRep manages repair and restoration projects for international
+customers. Additional work identified during a project requires
+customer approval before it can proceed.
 
 ## Problem
-Additional repair work requires a clear approval step before it can be added to the project scope. The goal of this project is to represent this existing process in a structured digital workflow.
+
+The existing approval process works, but information is exchanged
+through email, WhatsApp and phone calls. Follow-up and communication
+of the customer's decision are handled manually.
+
+The project explores how to structure this process and automate
+repetitive communication while preserving the existing approval logic.
 
 ## Scope
-From identifying additional work to receiving and recording the customer's decision and communicating the outcome back to the workshop.
+
+From identifying additional work to receiving and recording the
+customer's decision and communicating the outcome to the workshop.
 
 ## Out of Scope
-- invoicing
-- workshop scheduling
-- parts procurement
-- complete customer project management
+
+- Invoicing
+- Workshop scheduling
+- Parts procurement
+- Complete customer project management
 
 ## Stakeholders
-- Customer
-- Project Manager
-- Workshop / technician
+
+- Customer — the vehicle owner deciding on additional repair work
+- Project Manager — PolenRep, coordinating the request and decision
+- Subcontractor (workshop) — identifies and performs the additional work
 
 ## Desired Outcome
-Create a structured digital process for managing additional work that requires customer approval.
+
+Create a structured digital process for managing additional work
+that requires customer approval.
+
+## Implementation Scope
+
+PLD covers requirements and a simulated sprint.
+
+The working PAD prototype covers a smaller part of the process:
+recording additional-work information, manually recording a customer
+decision and sending an automated email to a test inbox representing
+the subcontractor.
+
+See the [case study](case_study.md) for the implemented scope,
+test results and limitations.
 
 ## Definition of Done
+
 A Story is Done when:
-- all Acceptance Criteria are met,
-- the implemented functionality has been tested,
-- no known blocking defects remain,
-- the functionality is ready to be demonstrated to the Product Owner / stakeholder.
+
+- All Acceptance Criteria are met.
+- The implemented functionality has been tested.
+- No known blocking defects remain.
+- The functionality is ready to be demonstrated to the Product Owner
+  or stakeholder.
+
+This Definition of Done describes the intended standard for
+implemented functionality. Moving a PLD story to Done during the
+sprint simulation does not demonstrate that this standard was met
+in a working system.

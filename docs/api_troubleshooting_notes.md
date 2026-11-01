@@ -1,6 +1,11 @@
 # API Troubleshooting Notes
 
-## General approach
+A troubleshooting checklist developed during API exercises.
+
+These notes are separate from the PAD notification tests and do not
+demonstrate a working API integration in this project.
+
+## General Approach
 
 When an API request fails:
 
@@ -23,7 +28,7 @@ When an API request fails:
 
 Do not diagnose an API problem based only on the HTTP status code.
 
-## Error types reviewed
+## HTTP Status Reference
 
 - 400 Bad Request — invalid request, data or format
 - 401 Unauthorized — authentication problem
@@ -32,14 +37,16 @@ Do not diagnose an API problem based only on the HTTP status code.
 - 409 Conflict — request conflicts with the current state of the system
 - 429 Too Many Requests — rate limit exceeded
 - 500 Internal Server Error — server-side error
-- 502 Bad Gateway — problem between services or servers
+- 502 Bad Gateway — invalid response from an upstream server
 - 503 Service Unavailable — service temporarily unavailable
 
-## Practical lessons
+## Practical Lessons
 
-- The response body often provides more useful information than the status code alone.
+- The response body often provides more useful information than
+  the status code alone.
 - A user-reported problem is not automatically a bug.
 - Check whether the user's permissions match the business requirements.
 - Do not make stronger claims than the evidence supports.
-- If the problem is outside my control, provide Engineering with the request, response code and response body.
+- If the problem is outside my control, provide Engineering with
+  the request, response code and response body.
 - Always retest after making a correction.

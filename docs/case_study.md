@@ -66,8 +66,16 @@ Sprint Goal:
 > requests from subcontractor submission to communicating the
 > customer’s final decision.
 
+Configured sprint dates in Jira: 2026-10-15 to 2026-10-29.
+The sprint was verified as closed on 2026-11-01. These are not
+the dates of every subsequent prototype or documentation activity.
+
 PLD-6–9, covering the customer question-and-answer loop, remained
-in the Product Backlog.
+in the Product Backlog. PLD-10 also includes further customer questions;
+that overlapping requirement was not implemented in PAD.
+
+See the [backlog](backlog.md) for the original story descriptions
+and Acceptance Criteria copied from Jira.
 
 ## Implemented and Tested Result
 
@@ -83,8 +91,10 @@ and contained:
 - subcontractor cost;
 - separate customer-facing price;
 - schedule impact;
-- decision statuses;
-- a filtered list of requests awaiting a decision.
+- decision statuses.
+
+The PAD space also provided a filtered list of requests awaiting
+a decision; the list was not part of the individual PAD-1 task.
 
 In this prototype, the project manager manually records the
 customer’s decision by changing the PAD-1 status. A Jira automation
@@ -94,6 +104,10 @@ the status changes to accepted (Zaakceptowana) or rejected
 
 Smart values insert the issue key, summary and current status into
 the message.
+
+The enabled automation uses an issue-transition trigger with the
+destination statuses Zaakceptowana or Odrzucona, followed by a
+custom email action. It uses one fixed test recipient.
 
 This prototype tests the final handoff only. It does not implement
 the customer-facing submission and decision capture.
@@ -113,13 +127,42 @@ No defects were observed in these checks.
 The tests used fictional data and the project owner’s email address
 as the workshop’s test inbox.
 
+## Configuration and Test Evidence
+
+Screenshots captured on 2026-11-01 show the existing configuration
+and an email received during testing on 2026-10-31.
+
+### PAD-1 Request
+
+Business information is recorded in the task description.
+Separate custom fields for each business item are not claimed.
+
+![PAD-1 request with fictional data, separate prices and pending status](images/pad-request.jpg)
+
+### Enabled Automation
+
+The trigger is limited to transitions to accepted or rejected.
+The email template uses the task key, summary and current status.
+
+![Enabled automation with decision statuses and email smart values](images/pad-automation.jpg)
+
+### Received Acceptance Email
+
+The received message shows PAD-1, the repair title and the accepted
+status. This screenshot evidences the acceptance notification only;
+the other check results are recorded in Test Results above.
+
+![Acceptance notification received from Jira](images/pad-email.jpg)
+
 ## Scope Change
 
 A request for an automatic reminder after 48 hours without a customer
 response was analysed during the training scenario.
 
 The change was approved and added to the backlog as PLD-12.
-It was not implemented or tested.
+It was not implemented or tested. The timing of the earlier-testing
+option in the scenario remains unresolved against the later backlog
+priority; see [CR-01](change_log.md).
 
 ## Risks and Issues
 

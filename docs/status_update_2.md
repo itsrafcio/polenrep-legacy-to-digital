@@ -18,7 +18,7 @@ separate subcontractor cost and customer-facing price,
 decision statuses, and a filtered list of pending decisions.
 
 An automation now sends an email when the status changes
-to Zaakceptowana or Odrzucona.
+to Zaakceptowana (Accepted) or Odrzucona (Rejected).
 
 The 48-hour customer reminder was approved in the training
 scenario and added to the backlog as PLD-12. It has not been
@@ -29,12 +29,12 @@ implemented.
 Tests used fictional data in PAD-1 and the project owner's
 email address as the subcontractor's test inbox.
 
-- Acceptance: an email arrived with the correct issue key,
+- Acceptance: an email arrived with the correct task key,
   summary and accepted status.
-- Rejection: an email arrived with the correct issue key,
+- Rejection: an email arrived with the correct task key,
   summary and rejected status.
 - Pending decision: returning PAD-1 to Oczekuje na decyzję
-  did not send a decision email.
+  (Pending decision) did not send a decision email.
 
 ## Risks / Issues
 
